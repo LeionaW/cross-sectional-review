@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Leiona Williams — Public Health Portfolio</title>
+  <style>
+    :root{
+      --blue:#0b63d6;
+      --soft-blue:#e8f1ff;
+      --text:#0b1b2b;
+      --muted:#5a6b7a;
+      --card-bg:#ffffff;
+      --radius:12px;
+      --container-max:1000px;
+      --gap:20px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    html,body{height:100%;}
+    body{
+      margin:0;
+      color:var(--text);
+      background:linear-gradient(180deg,var(--soft-blue) 0%, #ffffff 40%);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    .wrap{
+      max-width:var(--container-max);
+      margin:28px auto;
+      padding:20px;
+    }
+
+    .hero{
+      display:flex;
+      gap:var(--gap);
+      align-items:center;
+      background:rgba(255,255,255,0.75);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:0 6px 20px rgba(11,99,214,0.08);
+      flex-wrap:wrap;
+    }
+
+    .hero-left{
+      flex:1 1 320px;
+      min-width:0;
+    }
+
+    h1{
+      margin:0 0 8px 0;
+      font-size:clamp(20px,3.2vw,32px);
+      color:var(--blue);
+      letter-spacing:-0.4px;
+    }
+
+    .tagline{
+      margin:0 0 12px 0;
+      color:var(--muted);
+      font-size:clamp(14px,1.8vw,16px);
+    }
+
+    .photo-wrap{
+      width:120px;
+      height:120px;
+      flex:0 0 120px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-left:auto;
+    }
+
+    /* To show your photo instead of initials, change the line below to:
+       <img src="photo.jpg" alt="Leiona Williams" class="photo" />
+    */
+    .photo{
+      width:120px;
+      height:120px;
+      border-radius:999px;
+      background:linear-gradient(180deg,var(--blue),#0a57c0);
+      color:white;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:36px;
+      box-shadow:0 6px 18px rgba(11,99,214,0.18);
+      flex-shrink:0;
+    }
+
+    .sections{
+      margin-top:20px;
+      display:grid;
+      grid-template-columns:1fr 320px;
+      gap:20px;
+    }
+
+    section.card{
+      background:var(--card-bg);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:0 6px 18px rgba(12,20,30,0.04);
+    }
+
+    .about p{margin:0 0 8px 0;color:var(--muted);font-size:15px}
+    .skills-list{
+      list-style:none;
+      padding:0;
+      margin:8px 0 0 0;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+    .skills-list li{
+      background:var(--soft-blue);
+      color:var(--blue);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:14px;
+      font-weight:600;
+    }
+
+    .portfolio{
+      margin-top:12px;
+    }
+    .portfolio-grid{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .portfolio-card{
+      background:white;
+      border:1px solid #eef4ff;
+      border-radius:12px;
+      padding:16px;
+      min-width:180px;
+      flex:1 1 200px;
+      box-shadow:0 4px 14px rgba(11,99,214,0.04);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .card-title{font-weight:700;color:var(--text);margin:0 0 8px 0}
+    .card-body{color:var(--muted);font-size:14px}
+
+    .contact-list{list-style:none;padding:0;margin:0}
+    .contact-list li{margin:8px 0}
+    a.mail{
+      color:var(--blue);
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    @media (max-width:880px){
+      .sections{grid-template-columns:1fr;}
+      .photo-wrap{margin-left:0;order:-1;display:flex;width:100%;justify-content:center;padding-bottom:8px}
+      .hero{padding:18px;}
+      .photo{width:110px;height:110px;font-size:32px}
+    }
+
+    footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero" role="banner">
+      <div class="hero-left">
+        <h1>Leiona Williams</h1>
+        <p class="tagline">Public health student hoping to improve the community I grew up in</p>
+        <p style="margin:0;color:var(--muted);font-size:14px">
+          Public Health — Expected graduation 2028
+        </p>
+      </div>
+
+      <div class="photo-wrap" aria-hidden="false">
+        <!-- To show your photo instead of initials, change the line below to:
+             <img src="photo.jpg" alt="Leiona Williams" class="photo" />
+        -->
+        <div class="photo" title="Leiona Williams">LW</div>
+      </div>
+    </header>
+
+    <div class="sections">
+      <main>
+
+        <section class="card about" aria-labelledby="about-heading">
+          <h2 id="about-heading" style="margin-top:0;font-size:18px;color:var(--blue)">About me</h2>
+          <p>
+            I chose public health because all of my family members died from the same chronic diseases which helped me realize that I want to help people on a large scale and not just one person at a time.
+          </p>
+          <p>
+            I care most about diabetes and kidney disease because I have lost many family members to them, including my parents. I also care about women's health.
+          </p>
+          <p>
+            My career goal is to become a hospital administrator and one day open a women's clinic.
+          </p>
+        </section>
+
+        <section class="card skills" aria-labelledby="skills-heading" style="margin-top:16px">
+          <h2 id="skills-heading" style="margin-top:0;font-size:18px;color:var(--blue)">Skills</h2>
+          <ul class="skills-list" aria-label="Skills">
+            <li>Commitment to learning</li>
+            <li>Desire for deep understanding</li>
+            <li>Strong organizational skills</li>
+          </ul>
+        </section>
+
+        <section class="card portfolio" aria-labelledby="portfolio-heading" style="margin-top:16px">
+          <h2 id="portfolio-heading" style="margin-top:0;font-size:18px;color:var(--blue)">PH 320 Portfolio — Applied Biostatistics in Public Health, York College CUNY</h2>
+
+          <div class="portfolio-grid">
+            <div class="portfolio-card">
+              <div>
+                <div class="card-title">Week 3</div>
+                <div class="card-body">Coming soon.</div>
+              </div>
+            </div>
+
+            <div class="portfolio-card">
+              <div>
+                <div class="card-title">Week 4</div>
+                <div class="card-body">Coming soon.</div>
+              </div>
+            </div>
+
+            <div class="portfolio-card">
+              <div>
+                <div class="card-title">Week 5</div>
+                <div class="card-body">Coming soon.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside>
+        <section class="card contact" aria-labelledby="contact-heading">
+          <h3 id="contact-heading" style="margin-top:0;font-size:16px;color:var(--blue)">Contact</h3>
+          <ul class="contact-list">
+            <li>
+              <a class="mail" href="mailto:leiona.williams11@stu-mail.york.cuny.edu">leiona.williams11@stu-mail.york.cuny.edu</a>
+            </li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      © Leiona Williams
+    </footer>
+  </div>
+</body>
+</html>
